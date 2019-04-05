@@ -54,9 +54,8 @@ public class Profesor extends Persona {
         return salario +(horasTrabajadas*valorPorHora);
     }
     
-    public double getSalario(){
-        
-    }
+    //public double getSalario(){
+    //}
 
     public String getCargo() {
         return cargo;
