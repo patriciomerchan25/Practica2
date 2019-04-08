@@ -27,14 +27,14 @@ public class Persona {
     
     
 
-    public Persona(int codigo, String nombre, String cedula, String telefono, String direccion, String correo, Sede sede) {
+    public Persona(int codigo, String nombre, String cedula, String telefono, String direccion, String correo) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.cedula = cedula;
         this.telefono = telefono;
         this.direccion = direccion;
         this.correo = correo;
-        this.sede = sede;
+        
     }
 
     
@@ -47,7 +47,7 @@ private String cedula;
 private String telefono;
 private String direccion;
 private String correo;
-private Sede sede;
+
 
 //set
 

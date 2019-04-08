@@ -38,15 +38,17 @@ public class Prueba {
         
         //Agregamos grupo a la materia
         ingles.setGrupo(grupo);
+        matematica.setGrupo(grupo2);
+        
         
          //Istaciamos las carrerra y creamos 3 carreras
         Carrera mecatronica=new Carrera(1, "mecatronica", 2, 40, "ing mecatronica");
-       
         Carrera computacion=new Carrera(2, "Computacion", 4, 30, "ing ciencias computacion");
-        computacion.agregarMaterias(matematica);
-        computacion.agregarMaterias(ingles);
         Carrera telecomunicacion=new Carrera(3, "Telecomunicacion", 5, 32, "ing Telecomunicacion");
         
+        //Agregamos materia a carrera
+        computacion.agregarMaterias(matematica);
+        computacion.agregarMaterias(ingles);
         
         //Istaciamos la clase Sede y creamos 1 sede
         Sede sedeCuenca=new Sede(1, "sede CUENCA", "cuenca", "32423423");

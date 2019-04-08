@@ -12,17 +12,33 @@ package ec.edu.ups.clases;
 public class Materia {
     
     private int codigo;
-    private String nombre;
+    private String nombreM;
     private int numeroCreditos;
     private int numeroHoras;
     private int nivel;
+    private Grupo grupo;
+    
+
+    public Materia(int codigo, String nombreM, int numeroCreditos, int numeroHoras, int nivel) {
+        this.codigo = codigo;
+        this.nombreM = nombreM;
+        this.numeroCreditos = numeroCreditos;
+        this.numeroHoras = numeroHoras;
+        this.nivel = nivel;
+       
+      
+    }
+    
+    public Materia(int codigoG,String nombreG,int cupo){
+        grupo=new Grupo(codigoG, nombreG, cupo);
+    }
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreM(String nombreM) {
+        this.nombreM = nombreM;
     }
 
     public void setNumeroCreditos(int numeroCreditos) {
@@ -41,8 +57,8 @@ public class Materia {
         return codigo;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreM() {
+        return nombreM;
     }
 
     public int getNumeroCreditos() {
@@ -56,7 +72,22 @@ public class Materia {
     public int getNivel() {
         return nivel;
     }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    @Override
+    public String toString() {
+        return "Materia{" + "codigo=" + codigo + ", nombreM=" + nombreM + "\n numeroCreditos=" + numeroCreditos + ", numeroHoras=" + numeroHoras + "\n nivel=" + nivel + ", grupo=" + grupo + '}';
+    }
       
+   
+
     
     
 }

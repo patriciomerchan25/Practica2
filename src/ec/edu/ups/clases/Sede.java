@@ -6,6 +6,7 @@
 package ec.edu.ups.clases;
 
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,7 +18,17 @@ public class Sede {
     private String nombre;
     private String direccion;
     private String telefono;
-    private List<Carrera>carrera;
+    private List<Carrera>carreras;
+
+    public Sede(int codigo, String nombre, String direccion, String telefono) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        carreras=new ArrayList<>();
+    }
+    
+    
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
@@ -51,7 +62,15 @@ public class Sede {
         return telefono;
     }
 
-   
+    // Este metodo tine la funcion para agregar carrera  desde la clase Carrera.
+ public void agregarCarrera(Carrera carrera ){
+     carreras.add(carrera);
+ }  
+
+    @Override
+    public String toString() {
+        return "Sede{" + "codigo=" + codigo + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + ", carreras=" + carreras + '}';
+    }
     
     
     

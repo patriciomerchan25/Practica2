@@ -12,15 +12,23 @@ package ec.edu.ups.clases;
 public class Grupo {
     
     private int codigo;
-    private String combre;
+    private String nombre;
     private int cupo;
+
+    public Grupo(int codigo, String nombre, int cupo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cupo = cupo;
+    }
+    
+    
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
-    public void setCombre(String combre) {
-        this.combre = combre;
+    public void setNombre(String combre) {
+        this.nombre = combre;
     }
 
     public void setCupo(int cupo) {
@@ -31,13 +39,19 @@ public class Grupo {
         return codigo;
     }
 
-    public String getCombre() {
-        return combre;
+    public String getNombre() {
+        return nombre;
     }
 
     public int getCupo() {
         return cupo;
     }
+
+    @Override
+    public String toString() {
+        return "Grupo{" + "codigo=" + codigo + ", nombre=" + nombre + ", cupo=" + cupo + '}';
+    }
+    
     
     
     

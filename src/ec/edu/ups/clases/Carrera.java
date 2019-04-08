@@ -5,6 +5,9 @@
  */
 package ec.edu.ups.clases;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Usuario-Pc
@@ -13,10 +16,21 @@ public class Carrera {
    
     private int codigo;
     private String nombre;
-    private String cedula;
     private int numeroSemestre;
-    private String numeroEstudiante;
+    private int  numeroEstudiante;
     private String titulo;
+    private List<Materia>materias;
+    
+
+    public Carrera(int codigo, String nombre, int numeroSemestre, int numeroEstudiante, String titulo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.numeroSemestre = numeroSemestre;
+        this.numeroEstudiante = numeroEstudiante;
+        this.titulo = titulo;
+        materias=new ArrayList<>();
+        
+    }
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
@@ -26,15 +40,13 @@ public class Carrera {
         this.nombre = nombre;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
+    
 
     public void setNumeroSemestre(int numeroSemestre) {
         this.numeroSemestre = numeroSemestre;
     }
 
-    public void setNumeroEstudiante(String numeroEstudiante) {
+    public void setNumeroEstudiante(int numeroEstudiante) {
         this.numeroEstudiante = numeroEstudiante;
     }
 
@@ -50,20 +62,29 @@ public class Carrera {
         return nombre;
     }
 
-    public String getCedula() {
-        return cedula;
-    }
+   
 
     public int getNumeroSemestre() {
         return numeroSemestre;
     }
 
-    public String getNumeroEstudiante() {
+    public int getNumeroEstudiante() {
         return numeroEstudiante;
     }
 
     public String getTitulo() {
         return titulo;
+    }
+    
+    //Creamos el metodo para agregar materias desde la clase Materia.
+    public void agregarMaterias(Materia materia){
+        materias.add(materia);
+        
+    }
+
+    @Override
+    public String toString() {
+        return "Carrera{" + "codigo=" + codigo + ", nombre=" + nombre + "\n numeroSemestre=" + numeroSemestre + ", numeroEstudiante=" + numeroEstudiante + "\n titulo=" + titulo + ", materias=" + materias + '}';
     }
     
     
